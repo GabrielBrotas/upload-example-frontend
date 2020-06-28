@@ -1,17 +1,21 @@
 import React, {useState, useEffect} from 'react';
 
+// config para o consumo da API via axios
 import api from './services/api'
 
+// libraries ------
+
+// lodash é um biblioteca que teem funções como uniqueId, debounce, etc. vamos querer um uniqueId para geerar id unico para os arquivos que fizerem upload
 import {uniqueId} from 'lodash'
  
-
+// vai fazer as correções de tamanhos ex: bytes-kb/mb...
 import filesize from 'filesize' 
 
-
+// styles ------
 import GlobalStyle from './styles/global'
 import {Container, Content} from './styles'
 
-
+// componentes ------
 import Upload from './components/Upload'
 import FileList from './components/FileList'
 
@@ -23,6 +27,7 @@ function App() {
   const [uploadFinish, setUploadFinish] = useState([])
 
   
+
   useEffect( () => {
 
     const uploadedFileId = uploadFinish[0]
