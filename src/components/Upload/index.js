@@ -30,7 +30,7 @@ export default function Upload(props){
         <Dropzone accept="image/*" onDropAccepted={props.onUpload}>
 
             
-            { ({getRootProps, getInputProps, isDragActive, isDragReject}) /=> (
+            { ({getRootProps, getInputProps, isDragActive, isDragReject}) => (
             
             //Drop container vai ser nossa zona de arrastar arquivos, vamos ter que passar funçoes para ela 
             <DropContainer
@@ -46,7 +46,7 @@ export default function Upload(props){
             </DropContainer>
 
             // os elemento de upload precisa ter um input, obrigatorio, vamos passar as propriedades do getInputProps para ele porem vai ser um input invisivel nesse caso
-            
+
             )}
 
         </Dropzone>
