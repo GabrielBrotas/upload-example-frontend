@@ -1,24 +1,26 @@
 # frontend
  
-para a parte do react nao precisamos do Procfile pois o heroku tem uma funcionalidade chamada buildpacks é como se fosse uma serie de instruçoes que determina como uma aplicação deve funcionar.
-para configurar o buildpacks vamos no heroku criar nossa nova aplicação para o frontend
-ir em 'settings' e em buildpack vamos adicionar um buildpack
+ 
+ ## Deploy na Heroku
+  Para a parte do frontend react nao precisamos do arquivo Procfile pois o heroku tem uma funcionalidade chamada buildpacks é como se fosse uma série de instruções que determina como uma aplicação deve funcionar.
+  Para configurar o buildpacks vamos no heroku criar nossa nova aplicação para o frontend;
+  Ir em 'settings' -> buildpack e vamos adicionar um buildpack;
 
     colar esta url:
     mars/create-react-app-buildpack
 
-esse buildpack vai executar o comando 'create-react-app' 
+  Esse buildpack vai executar o comando 'create-react-app' para rodar nosso app.
 
-criar as variaveis ambiente do reeact
-as variaveeis ambieente do react precisam de um prefixo em todas elas 'REACT_APP_ + nome da variavel'
+  Feito isso vamos criar as variaveis ambientes;
+  As variaveis ambiente do react precisam de um prefixo em todas elas 'REACT_APP_ + nome da variavel'
+  exemplo:
+   
+    REACT_APP_API_URL=http://localhost:8081 <- No local host
 
-REACT_APP_API_URL=http://localhost:8081 No local host
-e no heroku
-REACT_APP_API_URL=https://upload-photos-backend.herokuapp.com
+    REACT_APP_API_URL=https://upload-photos-backend.herokuapp.com  <- link do app no heroku
 
-depois fazer o mesmo processo do backend
+  Depois fazer o mesmo processo do backend
 
-ir em "Deploy" -> metodo github e colocar o nome do repositorio
-também permitir deploys automaticos.
-
-realizar o commit no github e o heroku vai reconhecer e comecar a rodar o servidor
+  Ir em "Deploy" -> metodo github e colocar o nome do repositorio
+  Também permitir deploys automaticos.
+  E realizar o commit no github e o heroku vai reconhecer e comecar a rodar o servidor.
