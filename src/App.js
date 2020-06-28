@@ -18,7 +18,6 @@ import {Container, Content} from './styles'
 // componentes ------
 import Upload from './components/Upload'
 import FileList from './components/FileList'
-import { render } from '@testing-library/react';
 
 function App() {
 
@@ -28,7 +27,7 @@ function App() {
   const [uploadFinish, setUploadFinish] = useState([])
 
   
-  // quando um uploade for concluido...
+  // quando um upload for concluido...
   useEffect( () => {
 
     const uploadedFileId = uploadFinish[0]
@@ -175,25 +174,22 @@ function App() {
     // eslint-disable-next-line
   }, [])
 
-  return render(
-  
-    <Container>
+  return <Container>
+
+    <Content>
+
+      <Upload onUpload={handleUpload} />
+      
+      {/* 2 !! significa que vai retornar true or false, se for acima de 0 = true  */}
+      {!!uploadedFiles.length && (
+        <FileList  files={uploadedFiles} onDelete={handleDelete}/>
+      )}
+    </Content>
+
+    <GlobalStyle />
+
+  </Container>
     
-      <Content>
-
-        <Upload onUpload={handleUpload} />
-        
-        {/* 2 !! significa que vai retornar true or false, se for acima de 0 = true  */}
-        {!!uploadedFiles.length && (
-          <FileList  files={uploadedFiles} onDelete={handleDelete}/>
-        )}
-      </Content>
-
-      <GlobalStyle />
-
-    </Container>
-
-  ) 
   
 }
 
