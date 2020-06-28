@@ -180,7 +180,6 @@ function App() {
 
       <Upload onUpload={handleUpload} />
       
-      {/* 2 !! significa que vai retornar true or false, se for acima de 0 = true  */}
       {!!uploadedFiles.length && (
         <FileList  files={uploadedFiles} onDelete={handleDelete}/>
       )}
