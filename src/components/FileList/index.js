@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+// barra de progresso circular
 import {CircularProgressbar} from 'react-circular-progressbar'
 import {MdCheckCircle, MdError, MdLink} from 'react-icons/md'
 

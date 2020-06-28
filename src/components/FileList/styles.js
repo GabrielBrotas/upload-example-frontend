@@ -15,6 +15,7 @@ export const Container = styled.ul`
     }
 `
 
+// &+li = vai aplicar o css apartir do segundo item
 
 export const FileInfo = styled.div`
     display: flex;
