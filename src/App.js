@@ -18,6 +18,7 @@ import {Container, Content} from './styles'
 // componentes ------
 import Upload from './components/Upload'
 import FileList from './components/FileList'
+import { render } from '@testing-library/react';
 
 function App() {
 
@@ -174,9 +175,10 @@ function App() {
     // eslint-disable-next-line
   }, [])
 
-  return (
+  return render(
+  
     <Container>
-
+    
       <Content>
 
         <Upload onUpload={handleUpload} />
@@ -190,8 +192,9 @@ function App() {
       <GlobalStyle />
 
     </Container>
-    
-  );
+
+  ) 
+  
 }
 
 export default App;
