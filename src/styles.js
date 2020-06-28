@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-// div para o app
 export const Container = styled.div`
     height: 100%;
     display: flex;

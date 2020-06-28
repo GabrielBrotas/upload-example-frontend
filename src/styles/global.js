@@ -1,10 +1,10 @@
-// styled components é uma biblioteca que permite criar componentes estilizados
+
 import {createGlobalStyle} from 'styled-components'
 
-// importar a estilização padrao da progress bar
+
 import 'react-circular-progressbar/dist/styles.css'
 
-// configaração para toda a aplicação
+
 export default createGlobalStyle`
     * {
         margin: 0;
