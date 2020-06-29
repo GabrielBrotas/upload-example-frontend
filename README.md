@@ -1,6 +1,10 @@
-# frontend
- 
- 
+# Frontend
+  Projeto da rocketseat para fazer deploy de imagens na aws s3. Neste repositorio mostro por escrito o passo a passo de fazer o deploy do servidor e os codigos comentados mostrando a funcionalidade de cada componente.
+  
+  
+  ![imagem](https://github.com/GabrielBrotas/upload-photos-frontend/blob/master/public/images/app.JPG)
+  
+  
  ## Deploy na Heroku
   Para a parte do frontend react nao precisamos do arquivo Procfile pois o heroku tem uma funcionalidade chamada buildpacks é como se fosse uma série de instruções que determina como uma aplicação deve funcionar.
   Para configurar o buildpacks vamos no heroku criar nossa nova aplicação para o frontend;
