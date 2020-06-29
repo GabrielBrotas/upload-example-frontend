@@ -23,8 +23,6 @@ export default function Upload(props){
     }
 
     return (
-
-
         // accept = image/* -> permitir upload todo tipo de imagem
         // onDropAccepted = ao fazer um novo upload
         <Dropzone accept="image/*" onDropAccepted={props.onUpload}>
