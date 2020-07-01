@@ -86,6 +86,8 @@ function App() {
     // colocar o campo 'file' que foi o nome dado no backend ao enviar um upload, o campo uploadedFile.file que são os dados do arquivo que vao para o backend
     data.append('file', uploadedFile.file, uploadedFile.name)
 
+
+
     // enviar para /posts o formulario 'data' que contem a imagem e pegar o progresso do upload
     api.post('posts', data, {
       // monitorar o quanto do upload foi processado
@@ -100,7 +102,6 @@ function App() {
     }).then( (response) => {
 
       const {data} = response
-
       setUploadFinish([uploadedFile.id, data._id, data.url, true])
     
       setNewFile([])
@@ -179,11 +180,11 @@ function App() {
     <Content>
 
       <Upload onUpload={handleUpload} />
-      
 
       {!!uploadedFiles.length && (
-        <FileList  files={uploadedFiles} onDelete={handleDelete}/>
+        <FileList files={uploadedFiles} onDelete={handleDelete}/>
       )}
+
     </Content>
 
     <GlobalStyle />
